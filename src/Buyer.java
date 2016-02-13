@@ -1,5 +1,9 @@
-import java.util.Random;
+/** 
+ * A STOCK REPRESENTS ONE SECURITY ON A STOCK EXCHANGE IN OUR SIMULATION
+ * @author kvarjoy
+ */
 
+import java.util.Random;
 
 public class Buyer {
 	
@@ -16,15 +20,6 @@ public class Buyer {
 		proveSet();
 	}
 
-	private void buildPortfolio() {
-
-	}
-
-	private void proveSet() {
-		System.out.println("buyer " + name + " has a budget of $" + budget);
-	}
-
-
 	private void establishBuyerName() {
 		Random r = new Random();
 		name = r.nextInt(); //long and semi-unique
@@ -34,5 +29,13 @@ public class Buyer {
 		Random r = new Random();
 		budget = r.nextInt() / 100;
 	}
+
+	private void buildPortfolio() {
+
+	}	
+	
+	private void proveSet() {
+		System.out.println("buyer " + name + " has a budget of $" + budget);
+	}	
 	
 }

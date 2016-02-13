@@ -1,3 +1,8 @@
+/** 
+ * A STOCK REPRESENTS ONE SECURITY ON A STOCK EXCHANGE IN OUR SIMULATION
+ * @author kvarjoy
+ */
+
 import java.util.ArrayList;
 
 public class Portfolio {
@@ -6,7 +11,7 @@ public class Portfolio {
 
 	public Portfolio() 
 	{
-		// TODO Auto-generated constructor stub
+		
 	}
 
 }
