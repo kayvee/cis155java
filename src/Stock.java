@@ -3,6 +3,12 @@
  * @author kvarjoy
  */
 
+/**
+ * Still to do: add hash/array for industry and symbol randomization
+ * 				-need 20 different industries
+ * 				-26 characters for symbol
+ */
+
 import java.util.Random;
 
 public class Stock 
@@ -12,6 +18,8 @@ public class Stock
 	public double price; 
 	public int ipoQty;
 
+	private Random r = new Random();
+	
 	public Stock() 		
 	{
 		setIndustry();
@@ -31,7 +39,6 @@ public class Stock
 
 	private String getRandomLetter() {
 		String result;
-		Random r = new Random();
 		
 		int characterResult = r.nextInt() * 1000000;
 		
@@ -41,7 +48,7 @@ public class Stock
 		}
 		else
 		{
-			result = "B"; //26 different return values needed //DO THIS**
+			result = "B";
 		}
 		return result;
 	}
@@ -51,10 +58,9 @@ public class Stock
 	}
 
 	public void setIndustry() {
-		Random ind = new Random();
-		int l = ind.nextInt(100); // use value of l to determine which industry the stock belongs to
+		int l = r.nextInt(100); // use value of l to determine which industry the stock belongs to
 		
-		if (l < 10)						//need 20 different industries //DO THIS**
+		if (l < 10)
 		{
 			this.industry = "fishing";
 		}
@@ -70,14 +76,12 @@ public class Stock
 
 	private void setStockPrice()
 	{
-		Random p = new Random();
-		price = p.nextDouble() * 100;
+		price = r.nextDouble() * 100;
 	}
 
 	private void setIpoQty()
 	{
-		Random i = new Random();
-		ipoQty = i.nextInt(15000000);
+		ipoQty = r.nextInt(15000000);
 	}	
 	
 	public void printInfo()

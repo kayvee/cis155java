@@ -1,15 +1,23 @@
 /** 
- * A STOCK REPRESENTS ONE SECURITY ON A STOCK EXCHANGE IN OUR SIMULATION
+ * A TRANSACTION 
  * @author kvarjoy
  */
 
-public class Transaction {
-	
-	Stock l;
-	int numStockPurchased;
-	Buyer b; //whose id will be stored as a record of buying of a certain package of stocks
+/** 
+ * Still to do:
+ */
 
-	public Transaction() {
+public class Transaction 
+{
+	// Stock l;
+	public String symbol;
+	public double price;
+	public int numStockPurchased; // apt / stock's current price
+	
+	//Buyer b; //whose id will be stored as a record of buying of a certain package of stocks
+
+	public Transaction() 
+	{
 		
 	}
 

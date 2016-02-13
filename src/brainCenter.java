@@ -1,6 +1,17 @@
 /** 
- * A STOCK REPRESENTS ONE SECURITY ON A STOCK EXCHANGE IN OUR SIMULATION
+ * A BRAINCENTER
  * @author kvarjoy
+ */
+
+/**
+ * Overall still to do:
+ * 1. clean/add comments
+ * 2. refactor code for simplicity
+ */
+
+/** 
+ * Still to do:
+ * 			
  */
 
 public class brainCenter 
@@ -11,7 +22,10 @@ public class brainCenter
 		Market market = new Market(6000);
 		market.printMarket();
 		
-		//Buyer b = new Buyer();
-		
+		for (int i = 0; i < 100000; i++)
+		{
+			Buyer b = new Buyer();
+			b.buildRandomPortfolio(market);
+		}
 	}
 }

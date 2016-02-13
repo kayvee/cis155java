@@ -1,11 +1,16 @@
 /** 
- * A STOCK REPRESENTS ONE SECURITY ON A STOCK EXCHANGE IN OUR SIMULATION
+ * A MARKET
  * @author kvarjoy
+ */
+
+/** 
+ * Still to do:
  */
 
 import java.util.ArrayList;
 
-public class Market {
+public class Market 
+{
 	
 	public ArrayList<Stock> market = new ArrayList<Stock>();
 
@@ -20,7 +25,7 @@ public class Market {
 	
 	public void printMarket()
 	{
-		for(Stock st : market)
+		for (Stock st : market)
 		{
 			System.out.println("stock symbol: " + st.symbol + " @ price $" + st.price);
 		}
