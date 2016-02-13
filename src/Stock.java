@@ -15,6 +15,13 @@ public class Stock
 	{
 		System.out.println("I just called the constructor...");
 		industry = "defense"; //word, string of characters
+		
+		/*
+		 * 1. define price randomly
+		 * 2. define ipo qty randomly
+		 */
+		
+		
 		price = 55.0; //price is a double, a number with decimals
 		ipoQty = 50000000; //an integer, no decimals
 		symbol = "GEL"; //for our sim, we'll assign randomly determined symbol names
