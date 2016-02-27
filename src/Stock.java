@@ -7,10 +7,10 @@ import java.util.Random;
 
 public class Stock 
 {
-	public String industry;
-	public String symbol = "";
-	public double price; 
-	public int ipoQty;
+	public String industry; 	//
+	public String symbol = "";	//
+	public double price; 		//
+	public int ipoQty;			//
 
 	private Random r = new Random();
 	
