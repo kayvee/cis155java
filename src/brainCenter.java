@@ -22,10 +22,10 @@ public class brainCenter
 		Market market = new Market(6000);
 		market.printMarket();
 		
-		for (int i = 0; i < 100000; i++)
-		{
-			Buyer b = new Buyer();
-			b.buildRandomPortfolio(market);
-		}
+//		for (int i = 0; i < 100000; i++)
+//		{
+//			Buyer b = new Buyer();
+//			b.buildRandomPortfolio(market);
+//		}
 	}
 }

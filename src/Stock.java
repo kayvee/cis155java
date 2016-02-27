@@ -3,22 +3,24 @@
  * @author kvarjoy
  */
 
-/**
- * Still to do: add hash/array for industry and symbol randomization
- * 				-need 20 different industries
- * 				-26 characters for symbol
- */
-
 import java.util.Random;
 
 public class Stock 
 {
-	private String industry;
+	public String industry;
 	public String symbol = "";
 	public double price; 
 	public int ipoQty;
 
 	private Random r = new Random();
+	
+	private String letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	private String[] industries = new String[]
+			{"advertising", "aerospace", "airlines", "biotechnology", "broadcasting",
+			 "chemicals", "computers", "constructions", "credit", "food", 
+			 "gas", "insurance", "internet", "media", "metals", 
+			 "oil", "pharmaceuticals", "realestate", "security", "shipping"
+			};
 	
 	public Stock() 		
 	{
@@ -27,51 +29,21 @@ public class Stock
 		setIpoQty();
 		setSymbol();
 	}
-	
+
 	private void setSymbol() 
 	{	
 		for (int i = 0; i < 4; i++) 
 		{
-			String l = getRandomLetter();
+			int index = r.nextInt(letters.length());
+			char l = letters.charAt(index);
 			symbol = symbol + l;
 		}	
 	}
 
-	private String getRandomLetter() {
-		String result;
-		
-		int characterResult = r.nextInt() * 1000000;
-		
-		if (characterResult <= 100000000)
-		{
-			result = "A";
-		}
-		else
-		{
-			result = "B";
-		}
-		return result;
-	}
-
-	public String getIndustry() {
-		return industry;
-	}
-
 	public void setIndustry() {
-		int l = r.nextInt(100); // use value of l to determine which industry the stock belongs to
+		int index = r.nextInt(industries.length);
 		
-		if (l < 10)
-		{
-			this.industry = "fishing";
-		}
-		else if (l < 20 && l > 10)
-		{
-			this.industry = "telecom";
-		}
-		else
-		{
-			this.industry = "education";
-		}
+		this.industry = industries[index];		
 	}
 
 	private void setStockPrice()
@@ -93,3 +65,7 @@ public class Stock
 	}
 	
 }
+
+//public String getIndustry() {
+//	return industry;
+//}	
